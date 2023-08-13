@@ -12,7 +12,7 @@ exports.register = async (req, res) => {
    
     console.log("Printing Data from req body::",req.body);
 
-    if (!name || !email || !password || !contactNumber || !tutorName || !teachingCity || !cityLocation) {
+    if (!name || !email || !password ) {
         return res.status(400).json({ message: 'All fields are required' });
       }
 
