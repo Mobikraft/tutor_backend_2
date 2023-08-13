@@ -24,15 +24,15 @@ const studentSchema = new mongoose.Schema({
   },
   tutorName: {
     type: String,
-    required: true,
+    // required: true,
   },
   teachingCity: {
     type: String,
-    required: true,
+    // required: true,
   },
   cityLocation: {
     type: String,
-    required: true,
+    // required: true,
   },
   additionalDetails: {
     type: mongoose.Schema.Types.ObjectId,
