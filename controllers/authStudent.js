@@ -12,7 +12,7 @@ exports.register = async (req, res) => {
    
     console.log("Printing Data from req body::",req.body);
 
-    if (!name || !email || !password ) {
+    if (!name || !email || !password || !contactNumber ) {
         return res.status(400).json({ message: 'All fields are required' });
       }
 
@@ -41,9 +41,6 @@ exports.register = async (req, res) => {
         email,
         password: hashedPassword,
         contactNumber,
-        tutorName,
-        teachingCity,
-        cityLocation,
         additionalDetails: profileDetails._id,
         image:`https://api.dicebear.com/6.x/initials/svg?seed=${name}`
       });
